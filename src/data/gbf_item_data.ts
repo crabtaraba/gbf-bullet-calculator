@@ -118,7 +118,21 @@ const galbinusCentrum = new GbfItem({ja: '緑星の輝き'}, 'galbinus-centrum')
 const niveusCentrum = new GbfItem({ja: '白星の輝き'}, 'niveus-centrum');
 const aterCentrum = new GbfItem({ja: '黒星の輝き'}, 'ater-centrum');
 
+const true_dragons_golden_scale = new GbfItem({ja: '真龍の金鱗'}, 'true-Dragons-golden-scale');
+const hollowKey = new GbfItem({ja: '虚ろなる鍵'}, 'hollow-key');
+const verdantAzurite = new GbfItem({ja: '蒼翠の結晶'}, 'verdant-azurite');
 
+const apocalypse = new GbfItem({ja: '終末の暗晶'}, 'tears-of-the-apocalypse');
+const abyssalWing = new GbfItem({ja: '漆黒の棘翅'}, 'abyssal-Wing');
+const cunningDevilsHorn = new GbfItem({ja: '狡知の魔角'}, 'cunning-devils-horn');
+
+const ultimateMemory = new GbfItem({ja: 'アルテマメモリ'}, 'ultimate-memory');
+const provenanceCrystal = new GbfItem({ja: '極理の結晶'}, 'provenance-crystal');
+const apocalypticBlackFeather = new GbfItem({ja: '終末を齎す黒羽'}, 'apocalyptic-black-feather');
+
+const goldBrick = new GbfItem({ja: 'ヒヒイロカネ'}, 'gold-brick');
+const damascusCrystal = new GbfItem({ja: 'ダマスカス骸晶'}, 'damascus-crystal');
+const eternitySand = new GbfItem({ja: '刻の流砂'}, 'eternity-sand');
 
 // パラベラム弾
 const ironBullet = new Bullet(
@@ -369,6 +383,66 @@ const healingBullet = new Bullet(
   ],
   {
     cssColorString: 'rgb(78,161,94)',
+    iconFileName: 'parabellum-bullet.svg'
+  }
+);
+
+const blazingBullet = new Bullet(
+  {ja: 'ブレイズバレット'},
+  'blazing-bullet',
+  BulletType.PARABELLUM,
+  [
+    new BulletCost(ironBullet2, 1),
+    new GbfItemCost(fireUrn, 10),
+    new GbfItemCost(rubeusCentrum, 30)
+  ],
+  {
+    cssColorString: 'rgb(172, 28, 24)',
+    iconFileName: 'parabellum-bullet.svg'
+  }
+);
+
+const toxicBullet = new Bullet(
+  {ja: 'トキシックバレット'},
+  'toxic-bullet',
+  BulletType.PARABELLUM,
+  [
+    new BulletCost(ironBullet2, 1),
+    new GbfItemCost(waterUrn, 10),
+    new GbfItemCost(indicusCentrum, 30)
+  ],
+  {
+    cssColorString: 'rgb(27, 168, 55)',
+    iconFileName: 'parabellum-bullet.svg'
+  }
+);
+
+const thunderingBullet = new Bullet(
+  {ja: 'サンダーバレット'},
+  'thundering-bullet',
+  BulletType.PARABELLUM,
+  [
+    new BulletCost(ironBullet2, 1),
+    new GbfItemCost(lightUrn, 10),
+    new GbfItemCost(niveusCentrum, 30)
+  ],
+  {
+    cssColorString: 'rgb(255, 236, 69)',
+    iconFileName: 'parabellum-bullet.svg'
+  }
+);
+
+const freezingBullet = new Bullet(
+  {ja: 'フリーズバレット'},
+  'freezing-bullet',
+  BulletType.PARABELLUM,
+  [
+    new BulletCost(ironBullet2, 1),
+    new GbfItemCost(waterUrn, 10),
+    new GbfItemCost(indicusCentrum, 30)
+  ],
+  {
+    cssColorString: 'rgb(91, 183, 206)',
     iconFileName: 'parabellum-bullet.svg'
   }
 );
@@ -625,6 +699,99 @@ const goldBullet2 = new Bullet(
   ],
   {
     cssColorString: 'rgb(155,145,42)',
+    iconFileName: 'rifle-bullet.svg'
+  }
+);
+
+const ex_paradise_lost = new Bullet(
+  {ja: 'エンドモデル：パラダイス・ロスト'},
+  'Expert Model: Paradise Lost',
+  BulletType.RIFLE,
+  [
+    new BulletCost(fullMetalJacket5, 3),
+    new GbfItemCost(apocalypse, 150),
+    new GbfItemCost(damascusCrystal, 10)
+  ],
+  {
+    cssColorString: 'rgb(29, 110, 192)',
+    iconFileName: 'rifle-bullet.svg'
+  }
+);
+
+const ex_chaos_legion = new Bullet(
+  {ja: 'エンドモデル：ケイオス・レギオン'},
+  'Expert Model: Chaos Legion',
+  BulletType.RIFLE,
+  [
+    new BulletCost(fullMetalJacket5, 3),
+    new GbfItemCost(abyssalWing, 150),
+    new GbfItemCost(damascusCrystal, 10)
+  ],
+  {
+    cssColorString: 'rgb(113, 75, 72)',
+    iconFileName: 'rifle-bullet.svg'
+  }
+);
+
+const ex_anagenesis = new Bullet(
+  {ja: 'エンドモデル：アナゲンネーシス'},
+  'Expert Model: Anagenesis',
+  BulletType.RIFLE,
+  [
+    new BulletCost(fullMetalJacket5, 3),
+    new GbfItemCost(cunningDevilsHorn, 150),
+    new GbfItemCost(damascusCrystal, 10)
+  ],
+  {
+    cssColorString: 'rgb(255, 74, 58)',
+    iconFileName: 'rifle-bullet.svg'
+  }
+);
+
+const ex_genesis_nova = new  Bullet(
+  {ja: 'エンドモデル：ジェネシス・ノヴァ'},
+  'Expert Model: Genesis Nova',
+  BulletType.RIFLE,
+  [
+    new BulletCost(fullMetalJacket5, 3),
+    new GbfItemCost(ultimateMemory, 150),
+    new GbfItemCost(damascusCrystal, 10),
+    new GbfItemCost(goldBrick, 1)
+  ],
+  {
+    cssColorString: 'rgb(88, 222, 249)',
+    iconFileName: 'rifle-bullet.svg'
+  }
+);
+
+const ex_rationaleExitium = new Bullet(
+  {ja: 'エンドモデル：ラツィオ・エグゼティウム'},
+  'Expert Model: Rationale Exitium',
+  BulletType.RIFLE,
+  [
+    new BulletCost(ex_anagenesis, 3),
+    new GbfItemCost(provenanceCrystal, 200),
+    new GbfItemCost(goldBrick, 1),
+    new GbfItemCost(eternitySand, 3)
+  ],
+  {
+    cssColorString: 'rgb(5, 235, 235)',
+    iconFileName: 'rifle-bullet.svg'
+  }
+);
+
+const ex_anti_vasileia = new Bullet(
+  {ja: 'エンドモデル：アンチ・バシレイア'},
+  'Expert Model: Anti Vasileia',
+  BulletType.RIFLE,
+  [
+    new BulletCost(ex_paradise_lost, 3),
+    new GbfItemCost(apocalypticBlackFeather, 200),
+    new GbfItemCost(goldBrick, 1),
+    new GbfItemCost(eternitySand, 3)
+  ],
+  {
+    cssColorString: 'rgb(21, 16, 116)',
     iconFileName: 'rifle-bullet.svg'
   }
 );
@@ -1047,6 +1214,64 @@ const enhancingShell = new Bullet(
   ],
   {
     cssColorString: 'rgb(159,73,205)',
+    iconFileName: 'cartridge-bullet.svg'
+  }
+);
+
+const catastrophe_cylinder = new Bullet(
+  {ja: 'カタストロフィシリンダー'},
+  'Catastrophe Cylinder',
+  BulletType.CARTRIDGE,
+  [
+    new BulletCost(shotshell5, 1),
+    new GbfItemCost(primevalHorn, 300)
+  ],
+  {
+    cssColorString: 'rgb(40, 7, 64)',
+    iconFileName: 'cartridge-bullet.svg'
+  }
+);
+
+const akashic_cylinder = new Bullet(
+  {ja: 'アカシックシリンダー'},
+  'Akashic Cylinder',
+  BulletType.CARTRIDGE,
+  [
+    new BulletCost(shotshell5, 1),
+    new GbfItemCost(hollowKey, 300)
+  ],
+  {
+    cssColorString: 'rgb(194, 141, 92)',
+    iconFileName: 'cartridge-bullet.svg'
+  }
+);
+
+const cosmos_cylinder = new Bullet(
+  {ja: 'コスモスシリンダー'},
+  'Cosmos Cylinder',
+  BulletType.CARTRIDGE,
+  [
+    new BulletCost(shotshell5, 1),
+    new GbfItemCost(verdantAzurite, 300)
+  ],
+  {
+    cssColorString: 'rgb(19, 140, 245)',
+    iconFileName: 'cartridge-bullet.svg'
+  }
+);
+
+const ex_apocalypse = new Bullet(
+  {ja: 'エンドモデル：アポカリプス'},
+  'Expert Model: Apocalypse',
+  BulletType.CARTRIDGE,
+  [
+    new BulletCost(catastrophe_cylinder, 1),
+    new BulletCost(akashic_cylinder, 1),
+    new BulletCost(cosmos_cylinder, 1),
+    new GbfItemCost(apocalypticBlackFeather, 100)
+  ],
+  {
+    cssColorString: 'rgb(77, 29, 91)',
     iconFileName: 'cartridge-bullet.svg'
   }
 );
@@ -1624,6 +1849,22 @@ const hadesPoint3 = new Bullet(
   }
 );
 
+const ex_hexachromatic = new Bullet(
+  {ja: 'エンドモデル：ヘキサクロマティック'},
+  'Expert Model: Hexachromatic',
+  BulletType.AETHERIAL,
+  [
+    new GbfItemCost(provenanceCrystal, 100),
+    new GbfItemCost(true_dragons_golden_scale, 200),
+    new GbfItemCost(damascusCrystal, 10),
+    new GbfItemCost(eternitySand, 1)
+  ],
+  {
+    cssColorString: 'rgb(5, 235, 235)',
+    iconFileName: 'aetherial-bullet.svg'
+  }
+);
+
 // バレットリスト
 const parabellum: Bullet[] = [
   ironBullet,
@@ -1641,7 +1882,11 @@ const parabellum: Bullet[] = [
   shieldBullet,
   charmBullet,
   paralyzeBullet,
-  healingBullet
+  healingBullet,
+  blazingBullet,
+  toxicBullet,
+  thunderingBullet,
+  freezingBullet
 ];
 
 const rifle: Bullet[] = [
@@ -1660,7 +1905,13 @@ const rifle: Bullet[] = [
   silverBullet2,
   silverBullet3,
   goldBullet,
-  goldBullet2
+  goldBullet2,
+  ex_paradise_lost,
+  ex_chaos_legion,
+  ex_anagenesis,
+  ex_genesis_nova,
+  ex_rationaleExitium,
+  ex_anti_vasileia
 ];
 
 const cartridge: Bullet[] = [
@@ -1690,7 +1941,11 @@ const cartridge: Bullet[] = [
   stickyShell,
   stickyShell2,
   chaiserShell,
-  enhancingShell
+  enhancingShell,
+  catastrophe_cylinder,
+  akashic_cylinder,
+  cosmos_cylinder,
+  ex_apocalypse
 ];
 
 const aetherial: Bullet[] = [
@@ -1729,7 +1984,8 @@ const aetherial: Bullet[] = [
   zeusPoint3,
   hadesPoint,
   hadesPoint2,
-  hadesPoint3
+  hadesPoint3,
+  ex_hexachromatic
 ];
 
 export const bullet: {[k: string]: Bullet[]} = {
