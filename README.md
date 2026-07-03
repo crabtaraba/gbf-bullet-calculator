@@ -1,5 +1,8 @@
 # グラブルバレット計算機
 
+このページは subterraneanflower/gbf-bullet-calculator のForkです。
+個人利用目的でバレットデータを追加更新しています。
+
 バレットの計算機です
 
 https://sbfl.net/app/granbluefantasy/bulletcalc/
